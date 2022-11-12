@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense, useState } from "react";
+import "./App.css";
+
+const RatePage = lazy(() => import("./pages/RatePage"));
+const ThankPage = lazy(() => import("./pages/ThankPage"));
 
 function App() {
+  const [thanks, setThanks] = useState(false);
+  const [disable, setDisable] = useState(false);
+
+  const handleSubmit = (rate) => {
+    setDisable(true);
+    if (rate === null) {
+      setDisable(false);
+      return { message: "Please rate our services" };
+    } else {
+      setDisable(false);
+      setThanks(true);
+      return { rate: rate };
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<>Loading</>}>
+      <div className="container">
+        {!thanks ? <RatePage handleSubmit={handleSubmit} /> : <ThankPage />}
+      </div>
+    </Suspense>
   );
 }
 
