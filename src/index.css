@@ -18,10 +18,12 @@ body {
 p {
   font-size: 15px;
   color: hsl(217, 12%, 63%);
+  line-height: 20px;
 }
 
 h2 {
   color: white;
+  font-size: 27px;
 }
 #root {
   flex-direction: column;

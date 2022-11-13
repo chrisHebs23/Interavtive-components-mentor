@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "../App.css";
 import star from "../images/icon-star.svg";
 
-const RatePage = ({ handleSubmit }) => {
-  const [rate, setRate] = useState(null);
+const RatePage = ({ handleSubmit, rate, setRate }) => {
   const ratings = [1, 2, 3, 4, 5];
+
   return (
     <div className="inner-container">
       <div className="star-div">
@@ -15,12 +15,20 @@ const RatePage = ({ handleSubmit }) => {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <div>
+      <div className="rating-div">
         {ratings.map((i) => (
-          <button key={i}>{i}</button>
+          <button
+            key={i}
+            className={`rating-buttons ${i !== rate ? "" : "active-button"} `}
+            onClick={() => setRate(i)}
+          >
+            {i}
+          </button>
         ))}
       </div>
-      <button>Submit</button>
+      <button className="submit-button" onClick={() => handleSubmit(rate)}>
+        Submit
+      </button>
     </div>
   );
 };

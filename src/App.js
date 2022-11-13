@@ -6,15 +6,13 @@ const ThankPage = lazy(() => import("./pages/ThankPage"));
 
 function App() {
   const [thanks, setThanks] = useState(false);
-  const [disable, setDisable] = useState(false);
+  const [rate, setRate] = useState(null);
+  // const [disable, setDisable] = useState(false);
 
   const handleSubmit = (rate) => {
-    setDisable(true);
-    if (rate === null) {
-      setDisable(false);
-      return { message: "Please rate our services" };
+    if (!rate) {
+      alert("Please rate our services");
     } else {
-      setDisable(false);
       setThanks(true);
       return { rate: rate };
     }
@@ -23,7 +21,11 @@ function App() {
   return (
     <Suspense fallback={<>Loading</>}>
       <div className="container">
-        {!thanks ? <RatePage handleSubmit={handleSubmit} /> : <ThankPage />}
+        {!thanks ? (
+          <RatePage handleSubmit={handleSubmit} rate={rate} setRate={setRate} />
+        ) : (
+          <ThankPage rate={rate} />
+        )}
       </div>
     </Suspense>
   );
