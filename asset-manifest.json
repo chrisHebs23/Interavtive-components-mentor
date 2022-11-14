@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Interavtive-components-mentor/static/css/main.2e88e549.css",
+    "main.js": "/Interavtive-components-mentor/static/js/main.687e471c.js",
+    "static/js/203.6fa29d62.chunk.js": "/Interavtive-components-mentor/static/js/203.6fa29d62.chunk.js",
+    "static/js/155.fc75784e.chunk.js": "/Interavtive-components-mentor/static/js/155.fc75784e.chunk.js",
+    "static/js/787.b6a191c8.chunk.js": "/Interavtive-components-mentor/static/js/787.b6a191c8.chunk.js",
+    "static/media/illustration-thank-you.svg": "/Interavtive-components-mentor/static/media/illustration-thank-you.d74a66b551b99ae110b5362ed63106bf.svg",
+    "index.html": "/Interavtive-components-mentor/index.html",
+    "static/media/icon-star.svg": "/Interavtive-components-mentor/static/media/icon-star.12766a8d207af861a70f92500634c8be.svg",
+    "main.2e88e549.css.map": "/Interavtive-components-mentor/static/css/main.2e88e549.css.map",
+    "main.687e471c.js.map": "/Interavtive-components-mentor/static/js/main.687e471c.js.map",
+    "203.6fa29d62.chunk.js.map": "/Interavtive-components-mentor/static/js/203.6fa29d62.chunk.js.map",
+    "155.fc75784e.chunk.js.map": "/Interavtive-components-mentor/static/js/155.fc75784e.chunk.js.map",
+    "787.b6a191c8.chunk.js.map": "/Interavtive-components-mentor/static/js/787.b6a191c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e88e549.css",
+    "static/js/main.687e471c.js"
+  ]
+}
